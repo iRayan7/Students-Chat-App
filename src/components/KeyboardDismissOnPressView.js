@@ -1,3 +1,5 @@
+// a View component that dismiss the keyboard when pressing on it
+
 import React, {Component} from 'react'
 import {
     View,

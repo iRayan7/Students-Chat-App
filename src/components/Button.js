@@ -1,3 +1,5 @@
+// a Button component with gradient
+
 import React, {Component} from 'react'
 import {View, TouchableOpacity, KeyboardAvoidingView} from 'react-native'
 
