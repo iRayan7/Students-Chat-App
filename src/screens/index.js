@@ -7,3 +7,6 @@ export * from './WelcomeToAppScreen'
 export * from './GroupsScreen'
 export * from './ImportantEventsScreen'
 export * from './ProfileScreen'
+
+//Groups Stack
+export * from './GroupChatScreen'

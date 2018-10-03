@@ -8,6 +8,10 @@ import {Entypo, Ionicons, Feather} from '@expo/vector-icons';
 
 class GroupsScreen extends Component {
 
+    constructor(props){
+        super(props)
+    }
+
     static navigationOptions = ({navigation}) => {
         // const {id, region} = navigation.state.params;
         return {
@@ -36,15 +40,15 @@ class GroupsScreen extends Component {
 
         const groups = [
             {
-                title: 'عنوان',
+                title: 'سلم١٠٥',
                 lastMessage: {
-                    sender: 'محمد',
+                    sender: 'خالد',
                     message: 'كيف حال الشباب؟',
                 },
                 key: '1'
             },
             {
-                title: 'عنوان',
+                title: 'هاب١٢١',
                 lastMessage: {
                     sender: 'محمد',
                     message: 'كيف حال الشباب؟',
@@ -61,8 +65,12 @@ class GroupsScreen extends Component {
                     renderItem={
                         ({item}) =>
                             <GroupsFlatListItem
-                                title={item.title}
+                                groupTitle={item.title}
                                 lastMessage={item.lastMessage}
+                                groupId={item.key}
+                                // onPress={() => this.props.navigation.navigate('GroupChatScreen')}
+                                navigation={this.props.navigation}
+
                             />
 
                     }

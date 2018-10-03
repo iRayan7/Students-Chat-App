@@ -4,7 +4,7 @@ import React, {Component} from 'react'
 import {createStackNavigator, createBottomTabNavigator} from 'react-navigation'
 import {
     GroupsScreen, ImportantEventsScreen, LoginScreen, ProfileScreen, RegisterScreen,
-    WelcomeToAppScreen
+    WelcomeToAppScreen, GroupChatScreen
 } from "../screens";
 
 // icons from expo
@@ -76,11 +76,36 @@ const GroupsStack = createStackNavigator(
         GroupsScreen: {
             screen: GroupsScreen,
             navigationOptions: {}
+        },
+        GroupChatScreen: {
+            screen:  GroupChatScreen,
+            navigationOptions: {
+                // header: null,
+                // tabBarVisible: false,
+
+            }
         }
     },
-    {}
+    {
+        initialRouteName: 'GroupsScreen',
+
+    }
 );
 
+const hiddenTabBars = ['GroupChatScreen'] //these are the RouteNames of the screens you want to hide the tab bars on
+GroupsStack.navigationOptions = ({ navigation }) => {
+    let tabBarVisible = true
+    if (
+        hiddenTabBars.includes(
+            navigation.state.routes[navigation.state.index].routeName,
+        )
+    ) {
+        tabBarVisible = false
+    }
+    return {
+        tabBarVisible,
+    }
+}
 
 const BottomTabNavigation = createBottomTabNavigator(
     {

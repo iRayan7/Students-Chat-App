@@ -7,7 +7,19 @@ const GroupsFlatListItem = (props) => {
 
     return (
         <View style={styles.container}>
-            <TouchableOpacity style={styles.viewContainer}>
+            <TouchableOpacity
+                // onPress={props.onPress}
+                onPress={
+                    () => props.navigation.navigate(
+                        'GroupChatScreen',
+                        {
+                            groupId: props.groupId,
+                            groupTitle: props.groupTitle,
+
+                        }
+                    )
+                }
+                style={styles.viewContainer}>
 
                 {props.image ?
                     <Image
@@ -21,7 +33,7 @@ const GroupsFlatListItem = (props) => {
                 }
 
                 <View style={styles.textsContainer}>
-                    <TextWithFont size={16} isBold>{props.title}</TextWithFont>
+                    <TextWithFont size={16} isBold>{props.groupTitle}</TextWithFont>
                     {props.lastMessage
                         ?
                         <View style={{flexDirection: 'row-reverse'}}>
