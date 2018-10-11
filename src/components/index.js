@@ -9,3 +9,6 @@ export * from './KeyboardDismissOnPressView'
 
 // GroupsFlatListItem
 export * from './GroupsFlatListItem'
+
+// HorizontalLine
+export * from './HorizontalLine'

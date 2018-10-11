@@ -15,6 +15,8 @@ const Button = (props) => {
                 colors={['#56edff', '#6a60ee']}
                 style={{alignItems: 'center'}}
                 start={[1, 1]}
+                // mig
+                // start={[0.1, 0.1]}
                 locations={[0, 1]}
 
                 // end={[1, 1]}

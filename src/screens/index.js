@@ -10,3 +10,4 @@ export * from './ProfileScreen'
 
 //Groups Stack
 export * from './GroupChatScreen'
+export * from './GroupDetails'

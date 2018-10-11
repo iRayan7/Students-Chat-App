@@ -4,7 +4,7 @@ import React, {Component} from 'react'
 import {createStackNavigator, createBottomTabNavigator} from 'react-navigation'
 import {
     GroupsScreen, ImportantEventsScreen, LoginScreen, ProfileScreen, RegisterScreen,
-    WelcomeToAppScreen, GroupChatScreen
+    WelcomeToAppScreen, GroupChatScreen, GroupDetails
 } from "../screens";
 
 // icons from expo
@@ -84,6 +84,11 @@ const GroupsStack = createStackNavigator(
                 // tabBarVisible: false,
 
             }
+        },
+        GroupDetailsScreen: {
+            screen: GroupDetails,
+            navigationOptions: {}
+
         }
     },
     {
